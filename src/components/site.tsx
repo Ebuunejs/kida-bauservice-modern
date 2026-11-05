@@ -59,7 +59,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 md:grid-cols-3">
           <div>
             <img src={logo.url} alt="Kida Bauservice AG" width={277} height={78} loading="lazy" className="h-12 w-auto" />
-            <p className="mt-2 text-sm text-muted-foreground">Ihr zuverlässiger Partner für Bau, Umbau und Renovation in der Schweiz.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Ihr zuverlässiger Partner für Bau, Umbau und Renovation in Kölliken und der Region.</p>
           </div>
           <div className="text-sm text-muted-foreground">
             <p className="mb-2 font-semibold text-foreground">Kontakt</p>

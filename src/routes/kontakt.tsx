@@ -6,7 +6,7 @@ export const Route = createFileRoute("/kontakt")({
   head: () => ({
     meta: [
       { title: "Kontakt – KIDA Bauservice AG" },
-      { name: "description", content: "Kontaktieren Sie KIDA Bauservice AG für eine unverbindliche Offerte." },
+      { name: "description", content: "KIDA Bauservice AG, Hauptstrasse 141, 5742 Kölliken. Telefon 062 723 53 04 – unverbindliche Offerte anfragen." },
       { property: "og:title", content: "Kontakt – KIDA Bauservice AG" },
       { property: "og:description", content: "Jetzt unverbindliche Offerte anfragen." },
     ],
