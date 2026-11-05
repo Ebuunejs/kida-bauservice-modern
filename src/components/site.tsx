@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import logo from "@/assets/kida-logo.png.asset.json";
 
 const nav = [
   { to: "/", label: "Start" },
@@ -13,11 +14,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <Link to="/" className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center bg-primary font-display text-lg font-black text-primary-foreground">K</span>
-            <span className="font-display text-lg font-extrabold tracking-tight">
-              KIDA <span className="text-muted-foreground font-medium">Bauservice AG</span>
-            </span>
+          <Link to="/" className="flex items-center">
+            <img src={logo.url} alt="Kida Bauservice AG" width={277} height={78} className="h-10 w-auto md:h-12" />
           </Link>
           <nav className="hidden gap-8 md:flex">
             {nav.map((n) => (
@@ -47,7 +45,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <footer className="border-t border-border bg-card">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 md:grid-cols-3">
           <div>
-            <p className="font-display text-xl font-extrabold">KIDA Bauservice AG</p>
+            <img src={logo.url} alt="Kida Bauservice AG" width={277} height={78} loading="lazy" className="h-12 w-auto" />
             <p className="mt-2 text-sm text-muted-foreground">Ihr zuverlässiger Partner für Bau, Umbau und Renovation in der Schweiz.</p>
           </div>
           <div className="text-sm text-muted-foreground">
