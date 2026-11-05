@@ -6,7 +6,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "KIDA Bauservice AG – Bau, Umbau & Renovation" },
-      { name: "description", content: "KIDA Bauservice AG: Ihr Schweizer Partner für Hochbau, Umbau, Renovation und Kundenarbeiten." },
+      { name: "description", content: "KIDA Bauservice AG in Kölliken: Ihr Partner für Hochbau, Umbau, Renovation und Kundenarbeiten." },
       { property: "og:title", content: "KIDA Bauservice AG – Bau, Umbau & Renovation" },
       { property: "og:description", content: "Schweizer Bauqualität – termingerecht und zuverlässig." },
     ],
@@ -27,7 +27,7 @@ function Index() {
         <img src={hero} alt="Baustelle der KIDA Bauservice AG" className="absolute inset-0 -z-10 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/80 to-background/10" />
         <div className="mx-auto max-w-7xl px-6 py-32 md:py-44">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Bauservice · Schweiz</p>
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">Bauservice · Kölliken</p>
           <h1 className="mt-6 max-w-3xl font-display text-6xl font-black leading-[0.95] tracking-tight md:text-8xl">
             Wir bauen <span className="text-primary">Zukunft.</span>
           </h1>

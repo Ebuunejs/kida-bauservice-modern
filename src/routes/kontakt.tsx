@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { PageHero, SiteLayout } from "@/components/site";
+import { PageHero, SiteLayout, contact } from "@/components/site";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
     meta: [
       { title: "Kontakt – KIDA Bauservice AG" },
-      { name: "description", content: "Kontaktieren Sie KIDA Bauservice AG für eine unverbindliche Offerte." },
+      { name: "description", content: "KIDA Bauservice AG, Hauptstrasse 141, 5742 Kölliken. Telefon 062 723 53 04 – unverbindliche Offerte anfragen." },
       { property: "og:title", content: "Kontakt – KIDA Bauservice AG" },
       { property: "og:description", content: "Jetzt unverbindliche Offerte anfragen." },
     ],
@@ -23,9 +23,10 @@ function Page() {
       <PageHero eyebrow="Kontakt" title="Sprechen wir über Ihr Projekt." text="Wir melden uns innert 24 Stunden mit einer ersten Einschätzung." />
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-[1fr_1.4fr]">
         <div className="space-y-6 text-lg">
-          <div><p className="text-sm font-bold uppercase tracking-widest text-primary">Adresse</p><p>Musterstrasse 1, 8000 Zürich</p></div>
-          <div><p className="text-sm font-bold uppercase tracking-widest text-primary">Telefon</p><p>+41 44 000 00 00</p></div>
-          <div><p className="text-sm font-bold uppercase tracking-widest text-primary">E-Mail</p><p>info@kida-bauservice.ch</p></div>
+          <div><p className="text-sm font-bold uppercase tracking-widest text-primary">Adresse</p><p>{contact.street}, {contact.city}</p></div>
+          <div><p className="text-sm font-bold uppercase tracking-widest text-primary">Telefon</p><p><a href={contact.phoneHref} className="hover:text-primary">{contact.phone}</a></p></div>
+          <div><p className="text-sm font-bold uppercase tracking-widest text-primary">E-Mail</p><p><a href={`mailto:${contact.email}`} className="hover:text-primary">{contact.email}</a></p></div>
+          <a href={contact.directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-block border border-foreground/30 px-6 py-3 text-base font-bold hover:border-primary hover:text-primary">Route planen →</a>
         </div>
         {sent ? (
           <div className="bg-card p-10 font-display text-2xl font-bold">Danke! Wir melden uns in Kürze.</div>

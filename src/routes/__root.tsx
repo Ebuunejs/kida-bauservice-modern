@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "KIDA Bauservice AG" },
-      { name: "description", content: "KIDA Bauservice AG – Bau, Umbau und Renovation in der Schweiz." },
+      { name: "description", content: "KIDA Bauservice AG – Bau, Umbau und Renovation in Kölliken." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
           ],
