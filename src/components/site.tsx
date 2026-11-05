@@ -9,6 +9,19 @@ const nav = [
   { to: "/kontakt", label: "Kontakt" },
 ] as const;
 
+export const contact = {
+  name: "Kida Bauservice AG",
+  street: "Hauptstrasse 141",
+  city: "5742 Kölliken",
+  phone: "062 723 53 04",
+  phoneHref: "tel:+41627235304",
+  email: "info@kida-bauservice.ch",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hauptstrasse+141%2C+5742+K%C3%B6lliken",
+  directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Hauptstrasse+141%2C+5742+K%C3%B6lliken",
+  rating: "4.7",
+  reviews: 7,
+};
+
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -50,9 +63,10 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           </div>
           <div className="text-sm text-muted-foreground">
             <p className="mb-2 font-semibold text-foreground">Kontakt</p>
-            <p>Musterstrasse 1, 8000 Zürich</p>
-            <p>+41 44 000 00 00</p>
-            <p>info@kida-bauservice.ch</p>
+            <p>{contact.street}, {contact.city}</p>
+            <p><a href={contact.phoneHref} className="transition-colors hover:text-primary">{contact.phone}</a></p>
+            <p><a href={`mailto:${contact.email}`} className="transition-colors hover:text-primary">{contact.email}</a></p>
+            <p className="mt-2"><a href={contact.directionsUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:underline">Route planen →</a></p>
           </div>
           <div className="text-sm text-muted-foreground md:text-right">
             <p>© {new Date().getFullYear()} KIDA Bauservice AG</p>
